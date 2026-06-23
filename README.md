@@ -1,32 +1,143 @@
-# React + TypeScript + Vite
+# BuildGram Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+BuildGram Frontend is a simplified Instagram-style application built using React, TypeScript, and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application demonstrates core React concepts including:
 
-## React Compiler
+* Component-based architecture
+* Props
+* State management using useState
+* React Router navigation
+* Dynamic rendering using map()
+* Mock data integration
+* User profiles
+* Like, Save, and Comment functionality
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### Feed Page
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+* Displays a list of posts
+* Shows user information, images, captions, likes, and comments
+
+### Like Functionality
+
+* Toggle like/unlike on a post
+* Updates likes count dynamically
+
+### Save Functionality
+
+* Save and unsave posts
+
+### Comment Functionality
+
+* Add new comments to posts
+* Comments appear instantly without page refresh
+
+### Profile Page
+
+* Navigate to user profiles
+* Display user information and posts
+
+---
+
+## Tech Stack
+
+* React
+* TypeScript
+* Vite
+* React Router
+
+---
+
+## Project Structure
+
+src/
+
+├── components/
+
+│ ├── Feed.tsx
+
+│ ├── Navbar.tsx
+
+│ ├── Post.tsx
+
+│ ├── PostActions.tsx
+
+│ ├── PostComments.tsx
+
+│ ├── PostHeader.tsx
+
+│ └── PostImage.tsx
+
+├── pages/
+
+│ └── ProfilePage.tsx
+
+├── mockData.ts
+
+├── types.ts
+
+├── App.tsx
+
+└── main.tsx
+
+---
+
+## Installation
+
+### Prerequisites
+
+* Node.js
+* npm
+
+### Install Dependencies
+
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+The application will run at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Routing
+
+| Route              | Description       |
+| ------------------ | ----------------- |
+| /                  | Home Feed         |
+| /profile/:username | User Profile Page |
+
+---
+
+## Concepts Demonstrated
+
+* React Components
+* Props
+* State (useState)
+* React Router
+* useParams
+* Dynamic Rendering with map()
+* TypeScript Interfaces
+* Event Handling
+* Conditional Rendering
+
+---
+
+## Author
+
+Vaidehi Shetye
